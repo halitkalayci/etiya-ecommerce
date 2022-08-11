@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {CategoriesService} from 'src/app/features/categories/services/categories/categories.service';
-import {Product} from '../../models/product';
-import {ProductsService} from '../../services/products.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { CategoriesService } from 'src/app/features/categories/services/categories/categories.service';
+import { Product } from '../../models/product';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'etiya-product-list',
@@ -9,6 +9,7 @@ import {ProductsService} from '../../services/products.service';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
+  @Input() categoryId!: number;
   productList!: Product[];
   constructor(private productsService: ProductsService) {}
 
@@ -17,7 +18,7 @@ export class ProductListComponent implements OnInit {
   }
 
   getAllProducts() {
-    this.productsService.getAll().subscribe(response => {
+    this.productsService.getAll().subscribe((response) => {
       this.productList = response;
     });
   }
