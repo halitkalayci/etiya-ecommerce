@@ -7,10 +7,11 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { FilterProductPipe } from './pipes/filter-product.pipe';
 import { CardSkeletonComponent } from '../../shared/components/card-skeleton/card-skeleton.component';
+import { CoreModule } from 'src/app/core/core.module';
 
 @NgModule({
   declarations: [ProductCardComponent, ProductListComponent, FilterProductPipe],
-  imports: [CommonModule, ProductsRoutingModule, SharedModule],
+  imports: [CommonModule, ProductsRoutingModule, SharedModule, CoreModule],
   exports: [ProductListComponent],
 })
 export class ProductsModule {}
