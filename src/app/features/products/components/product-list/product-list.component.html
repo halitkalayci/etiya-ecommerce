@@ -11,7 +11,11 @@
       </div>
     </ng-template>
 
-    <etiya-card-skeleton *ngSwitchCase="'pending'"></etiya-card-skeleton>
+    <div *ngSwitchCase="'pending'">
+      <div class="col-4">
+        <etiya-card-skeleton></etiya-card-skeleton>
+      </div>
+    </div>
   </ng-container>
 </div>
 

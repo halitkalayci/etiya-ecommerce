@@ -18,6 +18,7 @@ export class ProductListComponent implements OnInit {
   @Input() categoryId!: number;
   productList!: Product[];
   fetchStatus = 'pending';
+  pageSize = 10;
   constructor(private productsService: ProductsService) {}
 
   ngOnInit(): void {
