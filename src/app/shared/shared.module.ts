@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.component';
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,7 @@ import { CardSkeletonComponent } from './components/card-skeleton/card-skeleton.
     DashboardLayoutComponent,
     CardSkeletonComponent,
   ],
-  imports: [CommonModule, SkeletonModule],
+  imports: [CommonModule, SkeletonModule, CoreModule],
   exports: [
     NavbarComponent,
     MainLayoutComponent,
